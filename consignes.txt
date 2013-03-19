@@ -1,0 +1,9 @@
+Consigne pour le bon déroulement du projet
+
+On fait toujours un update avant de faire un commit pour ne pas effacer le code des autres. 
+Si on arrive pas à faire quelque chose, on ne laisse pas les choses trainer mais on demande de l'aide.
+
+
+Remarque :
+
+Le code dans le dossier nebulus est à compiler avec CMAKE pour avoir le projet visualstudio
