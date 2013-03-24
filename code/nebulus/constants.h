@@ -1,30 +1,35 @@
-//------- constants.h --------
+ï»¿//------- constants.h --------
 
-/* Ce fichier contient toutes les constantes et les variables globales qui seront utilisées dans
-	le jeu */
+/* Ce fichier contient toutes les constantes et les variables globales qui seront utilisï¿½es dans
+le jeu */
+#pragma once
 
-#include "common.h"
 #include "drawimage.h"
 #include "shader_sh.h"
 
 #define NUMBER_MESH 10
 
-// constantes de taille d'écran
+	// constantes de taille d'Ã©cran
 
-const int   c_ScreenW;
-const int   c_ScreenH;
+	extern int   c_ScreenW;
+	extern int   c_ScreenH;
 
-// variables globales
+	// variables globales
 
-bool  g_keys[256]; // clavier
-TriangleMesh *g_Mesh[10]; // tableau des mesh des tiles élémentaires
-int g_order[12]={9,8,7,3,6,2,5,1,4,0,0,0}; // map 
-v3f g_Eye; // eye
-std::map<std::string,Tex2DRGBA*> g_Textures; // textures
+	extern bool  g_keys[256]; // clavier
 
-AutoBindShader::shader_sh g_Shader; // shader utilisé
+	extern int g_order[12]; // map 
+	
+	extern TriangleMesh *g_Mesh[10]; // tableau des mesh des tiles Ã©lÃ©mentaires
 
-float angle1=0, angle2;
+	extern v3f g_Eye; // eye
+	extern std::map<std::string,Tex2DRGBA*> g_Textures; // textures
 
-int altitude;
-unsigned int zoom;
+	extern AutoBindShader::shader_sh g_Shader; // shader utilisÃ©
+	
+	extern float angle1;
+	extern float angle2;
+
+	extern int altitude;
+	extern unsigned int zoom;
+
