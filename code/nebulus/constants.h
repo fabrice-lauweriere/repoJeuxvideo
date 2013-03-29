@@ -3,9 +3,12 @@
 /* Ce fichier contient toutes les constantes et les variables globales qui seront utilis�es dans
 le jeu */
 #pragma once
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 
 #include "drawimage.h"
 #include "shader_sh.h"
+#endif
 
 #define NUMBER_MESH 10
 
@@ -15,7 +18,7 @@ le jeu */
 	extern int   c_ScreenH;
 
 	// variables globales
-
+	
 	extern bool  g_keys[256]; // clavier
 
 	extern int g_order[12]; // map 

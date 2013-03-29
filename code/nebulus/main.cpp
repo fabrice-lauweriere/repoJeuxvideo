@@ -2,15 +2,18 @@
 
 
 #include "controls.h"
-//#include "graphics.h"
-//#include "common.h"
+#include "graphics.h"
+#include "common.h"
+
+
+LIBSL_WIN32_FIX;
 
 
 void initConstants() {
 	angle1    = 0;
 	angle2    = 0;
 	altitude  = 0;
-	zoom      = 0;
+	zoom      = 500;
     c_ScreenH = 800;
 	c_ScreenW = 800;
 }
@@ -20,7 +23,7 @@ int main(int argc,const char **argv)
 {
 	initConstants();
 	std::cout << c_ScreenW  <<std::endl;
-	/*try { // error handling
+	try { // error handling
 
 		// opens a window
 		SimpleUI::init(c_ScreenW,c_ScreenH,"Basic framework");
@@ -35,9 +38,6 @@ int main(int argc,const char **argv)
 		drawimage_init(c_ScreenW,c_ScreenH);
 		g_Shader.init();
 		std::stringstream texturePath;
-	
-	
-		
 		loadMeshes();
 		for(int u = 0;u<NUMBER_MESH;u++) {
 		//int u = 0;	
@@ -75,7 +75,7 @@ int main(int argc,const char **argv)
 
 	} catch (Fatal& f) { // error handling
 		std::cerr << Console::red << f.message() << Console::gray << std::endl;
-	}*/
+	}
 	return 0;
 }
 

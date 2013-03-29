@@ -3,7 +3,7 @@
 
 #include "constants.h"
 #include "controls.h"
-/*
+#include "common.h"
 
 void drawTexturedMesh(TriangleMesh *mesh)
 {
@@ -14,7 +14,7 @@ void drawTexturedMesh(TriangleMesh *mesh)
       int t   = mesh->surfaceTriangleIdAt(s,i);
       v3u tri = mesh->triangleAt(t);
       ForIndex(v,3) {
-        VertexData *vertex = (VertexData*)mesh->vertexDataAt(tri[v]);
+        VertexData *vertex = (VertexData*) mesh->vertexDataAt(tri[v]);
         glTexCoord2fv( &vertex->uv[0]  );
         glNormal3fv  ( &vertex->nrm[0] );
         glVertex3fv  ( &vertex->pos[0] );
@@ -75,7 +75,7 @@ void mainRender()
 	g_Shader.begin();
 	g_Shader.Proj.set( perspectiveMatrixGL((float)M_PI/4.0f, 1.0f, 5.0f, 10000.0f) );
 	
-	//actionButtons();
+	actionButtons();
 
 	g_Eye = V3F(zoom*cos(angle2),zoom*sin(angle2),altitude);
 	g_Shader.View.set( lookatMatrix(V3F(zoom*cos(angle2),zoom*sin(angle2),altitude),V3F(0,0,altitude), V3F(0,0,1) ));
@@ -86,4 +86,4 @@ void mainRender()
 
 	drawTower(10);
 	g_Shader.end();
-}*/
+}

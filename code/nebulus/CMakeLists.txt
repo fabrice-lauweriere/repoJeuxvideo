@@ -17,5 +17,5 @@ INCLUDE_DIRECTORIES(common)
 
 AUTO_BIND_SHADERS( shader_sh )
 
-ADD_EXECUTABLE(nebulus main.cpp controls.cpp controls.h enemies.cpp enemies.h graphics.cpp graphics.h light.cpp light.h personnage.cpp personnage.h constants.h shader_sh.h shader_sh.fp shader_sh.vp)
+ADD_EXECUTABLE(nebulus main.cpp enemies.cpp enemies.h constants.h constants.cpp  graphics.h graphics.cpp  light.h light.cpp personnage.h personnage.cpp  controls.cpp controls.h shader_sh.h shader_sh.fp shader_sh.vp)
 TARGET_LINK_LIBRARIES(nebulus common ${LIBSL_LIBRARIES} ${LIBSL_GL_LIBRARIES})
